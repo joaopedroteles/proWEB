@@ -1,0 +1,86 @@
+<!-- No repositório de atividades, cria uma pasta atividade5 que implemente uma aplicação web (npm init).
+
+A aplicação deve possuir uma rota "/" que renderiza um formulário implementado no arquivo "views/index.html";
+
+O formulário deve possuir os campos nome, endereço, telefone e data de agendamento.
+
+Os dados do formulário devem ser enviados para a rota (post) "/dados" que deve renderizar a página "views/dados.html"
+apresentando os dados digitados no form.
+
+OBS1: na tag form, o atributo action é igual a "/dados" e o atributo method é igual a "post".
+
+OBS2: as páginas .html devem utilizar o BS5.   
+
+npm init
+npm install express
+npm install ejs
+npm install body-parser
+npm install nodemon -D
+npm run start
+http://localhost:3000/
+http://localhost:3000/dados
+
+-->
+
+
+<div>
+<H4>atividade5</H4>
+
+
+</div>
+
+<form action="/dados" method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+
+<div class="form-group">
+  <label for="nomeex"class="form-label">Nome</label>
+  <input type="text"
+    class="form-control" name="nome" id="nomeex" aria-describedby="helpId" placeholder="">
+  <small id="helpNome" class="form-text text-muted"></small>
+</div>
+
+<div class="form-group">
+    <label for="endereçoex"class="form-label">endereço</label>
+    <input type="text"
+      class="form-control" name="endereço" id="endereçoex" aria-describedby="helpendereço" placeholder="">
+    <small id="helpendereço" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="telefoneex" class="form-label">telefone</label>
+    <input type="number"
+      class="form-control" name="telefone" id="endereçoex" aria-describedby="helptelefone" placeholder="">
+    <small id="helptelefone" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="dataex" class="form-label">data</label>
+    <input type="date"
+      class="form-control" name="data" id="endereçoex" aria-describedby="helpdata" placeholder="">
+    <small id="helpdata" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="agendamentoex" class="form-label">agendamento</label>
+    <input type="date"
+      class="form-control" name="agendamento" id="endereçoex" aria-describedby="helpagendamento" placeholder="">
+    <small id="helpagendamento" class="form-text text-muted"></small>
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">remember me</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

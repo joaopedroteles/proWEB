@@ -1,0 +1,11 @@
+{
+  "name": "webpro5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "atv5.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "pedro oliveira",
+  "license": "ISC"
+}

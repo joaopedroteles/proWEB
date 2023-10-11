@@ -1,0 +1,139 @@
+<!-- No seu repositório de atividade, crie uma pasta atividade7 que contenha a solução para o exercício abaixo.
+
+Crie um formulário para marcação de consulta:
+
+1 - O formulário deve ter uma seção de dados pessoais, contendo: nome completo, CPF, data de nascimento, endereço, UF, CEP, e-mail e telefone.
+
+
+2 - O formulário deve ter uma seção de dados da consulta, contendo: seleção da especialidade médica (ex. Cardiologia, dermatologia)
+, data e hora, seleção de medicamentos alérgicos (ex. Antibióticos, Anti-inflamatórios) e campo de informações adicionais (múltiplas Linhas).
+
+
+3 – Se for enviado algum campo vazio, a aplicação deve apresentar uma mensagem de erro informando o nome do campo.
+
+Como solução, envie o link da pasta atividade7. 
+
+npm init
+npm install express
+npm install ejs
+npm install body-parser
+npm install nodemon -D
+npm run start
+http://localhost:3000/
+http://localhost:3000/dados
+
+
+
+-->
+
+
+<div>
+<H4>atividade7</H4>
+
+<h3> Marcação de consulta </h3>
+
+</div>
+
+<form action="/dados" method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+<div class="form-group">
+  <label for="nomeex"class="form-label">Nome</label>
+  <input type="text"
+    class="form-control" name="nome" id="nomeex" aria-describedby="helpId" placeholder="">
+  <small id="helpNome" class="form-text text-muted"></small>
+</div>
+
+<div class="form-group">
+  <label for="CPFex"class="form-label">CPF</label>
+  <input type="text"
+    class="form-control" name="CPF" id="CPFex" aria-describedby="helpId" placeholder="">
+  <small id="helpCPF" class="form-text text-muted"></small>
+</div>
+
+<div class="form-group">
+    <label for="endereçoex"class="form-label">endereço</label>
+    <input type="text"
+      class="form-control" name="endereço" id="endereçoex" aria-describedby="helpendereço" placeholder="">
+    <small id="helpendereço" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="telefoneex" class="form-label">telefone</label>
+    <input type="number"
+      class="form-control" name="telefone" id="endereçoex" aria-describedby="helptelefone" placeholder="">
+    <small id="helptelefone" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="dataex" class="form-label">data</label>
+    <input type="date"
+      class="form-control" name="data" id="endereçoex" aria-describedby="helpdata" placeholder="">
+    <small id="helpdata" class="form-text text-muted"></small>
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">remember me</label>
+    </div>
+
+<fieldset>
+<div>
+  <label>seleção da especialidade médica</label><br><br>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" name="Cardiologia" id="" value="checkedValue" checked>
+      Cardiologia
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" name="dermatologia" id="" value="checkedValue" checked>
+      dermatologia
+    </label>
+  </div>
+</div>
+</fieldset>
+
+<fieldset>
+  <div>
+    <label>seleção de medicamentos alérgicos</label><br><br>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" name="Antibióticos" id="" value="checkedValue" checked>
+        Antibióticos
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" name="Anti-inflamatórios" id="" value="checkedValue" checked>
+        Anti-inflamatórios
+      </label>
+    </div>
+  </div>
+  </fieldset>
+
+<div class="form-group">
+  <label for="">informações adicionais</label>
+  <input type="text" class="form-control" name="informações-adicionais" id="" aria-describedby="helpId" placeholder="">
+  <small id="helpId" class="form-text text-muted">Help text</small>
+</div>
+
+  <div class="form-group">
+    <label for="agendamentoex" class="form-label">agendamento</label>
+    <input type="date"
+      class="form-control" name="agendamento" id="endereçoex" aria-describedby="helpagendamento" placeholder="">
+    <small id="helpagendamento" class="form-text text-muted"></small>
+  </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
